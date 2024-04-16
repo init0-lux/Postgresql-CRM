@@ -1,0 +1,60 @@
+CREATE DATABASE Aesthetics CHAR SET utf8 COLLATE utf8_bin;
+Use Aesthetics;
+
+CREATE TABLE Users(
+	userId INT AUTO_INCREMENT NOT NULL,
+	userName VARCHAR(15) NOT NULL,
+	firstName VARCHAR(15) NOT NULL,
+	lastName VARCHAR(15) NOT NULL,
+	email VARCHAR(25) NOT NULL,
+	description TEXT NULL,
+	disp_pic BLOB NULL,
+	address VARCHAR(60) NULL,
+	phone VARCHAR(12) NOT NULL,
+	phone2 VARCHAR(12) NULL,
+	city VARCHAR(12) NULL,
+	country VARCHAR(12) NULL,
+	PRIMARY KEY (userId)
+) ENGINE = INNODB;
+
+CREATE TABLE Customers (
+	custId INT AUTO_INCREMENT NOT NULL,
+	custName VARCHAR(15) NOT NULL,
+	description TEXT NULL,
+	email VARCHAR(25) NULL,
+	disp_pic BLOB NULL,
+	address VARCHAR(60) NULL,
+	phone VARCHAR(12) NOT NULL,
+	phone2 VARCHAR(12) NULL,
+	city VARCHAR(12) NULL,
+	country VARCHAR(12) NULL,
+	PRIMARY KEY (clientId)
+) ENGINE = INNODB;
+
+CREATE TABLE Orders (
+	orderId INT AUTO_INCREMENT NOT NULL,
+	orderType VARCHAR(15) NOT NULL,
+	description TEXT NULL,
+	notes BLOB NULL,
+	PRIMARY KEY (orderId)
+) ENGINE = INNODB;
+
+CREATE TABLE Staff (
+	staffId INT AUTO_INCREMENT NOT NULL,
+	firstName VARCHAR(20) NOT NULL,
+	lastName VARCHAR(20) NOT NULL,
+	role VARCHAR(15) NULL,
+	address VARCHAR(30) NULL,
+	aadhaar CHAR(12) NULL,
+	age INT NOT NULL,
+	email VARCHAR(25) NULL,
+	dob DATETIME NOT NULL,
+	staff_dp BLOB NULL,
+	phone VARCHAR(12) NOT NULL,
+	phone2 VARCHAR(12) NULL,
+	city VARCHAR(12) NULL,
+	country VARCHAR(12) NULL,
+	hireDate DATETIME NULL,
+	maritalStatus VARCHAR(10) NULL,
+	PRIMARY KEY (staffId)
+) ENGINE = INNODB;
